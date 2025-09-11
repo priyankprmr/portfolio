@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/utils/extensions.dart';
 
 class SkillCard extends StatelessWidget {
   final String _text;
@@ -10,9 +11,12 @@ class SkillCard extends StatelessWidget {
       padding: EdgeInsets.all(8.0),
       decoration: BoxDecoration(
         color: Colors.teal.shade700,
-        borderRadius: BorderRadius.circular(8.0),
+        borderRadius: BorderRadius.circular(18.0),
       ),
-      child: Text(_text, style: TextStyle(color: Colors.white)),
+      child: Text(
+        _text,
+        style: TextStyle(color: Colors.white),
+      ).horizontalPadding(8.0),
     );
   }
 }

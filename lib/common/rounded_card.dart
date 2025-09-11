@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/utils/extensions.dart';
+import 'package:portfolio/utils/text_styles.dart';
 
 class RoundedCard extends StatelessWidget {
   final String _text;
@@ -15,7 +16,7 @@ class RoundedCard extends StatelessWidget {
       ),
       child: Text(
         _text,
-        style: TextStyle(color: Colors.white),
+        style: TextStyles.size14White(),
       ).horizontalPadding(8.0),
     );
   }

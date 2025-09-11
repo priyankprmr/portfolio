@@ -1,23 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/common/gap.dart';
 import 'package:portfolio/common/rounded_card.dart';
+import 'package:portfolio/utils/text_styles.dart';
 
 class SkillsWidget extends StatelessWidget {
   const SkillsWidget({super.key});
+
+  static const List<String> _skills = [
+    'Dart',
+    'Firebase',
+    'Authentication',
+    'Riverpod',
+    'GetX',
+    'Provider',
+    'API Integration',
+    'SQLite',
+    'Hive',
+    'Node.js',
+    'Git',
+    'Web',
+    'Figma',
+    'Agora SDK',
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Text(
-          'SKILLS',
-          style: TextStyle(
-            color: Colors.teal.shade700,
-            fontWeight: FontWeight.w600,
-            fontSize: 16.0,
-          ),
-        ),
+        Text('SKILLS', style: TextStyles.size16TealW600()),
         Gap(height: 8.0),
         Container(
           decoration: BoxDecoration(
@@ -28,11 +39,7 @@ class SkillsWidget extends StatelessWidget {
           child: Wrap(
             spacing: 8.0,
             runSpacing: 8.0,
-            children: [
-              ...'Lorem Ipsum Lorem Ipsum LoremLoremLorem IpsumLorem Lorem Ipsum Lorem Ipsum LoremLoremLorem Ipsum LoremLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem'
-                  .split(' ')
-                  .map((e) => RoundedCard(text: e)),
-            ],
+            children: [..._skills.map((skill) => RoundedCard(text: skill))],
           ),
         ),
       ],

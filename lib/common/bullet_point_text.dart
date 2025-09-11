@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/common/horizontal_dot_spacer.dart';
 import 'package:portfolio/utils/extensions.dart';
+import 'package:portfolio/utils/text_styles.dart';
 
 class BulletPointText extends StatelessWidget {
   final String _text;
@@ -14,12 +15,7 @@ class BulletPointText extends StatelessWidget {
         HorizontalDotSpacer(
           size: 6.0,
         ).symmetricPadding(vertical: 6.0, horizontal: 8.0),
-        Flexible(
-          child: Text(
-            _text,
-            style: TextStyle(fontSize: 12.0, fontFamily: 'Roobert,sans-serif'),
-          ),
-        ),
+        Flexible(child: Text(_text, style: TextStyles.size14Black())),
       ],
     );
   }

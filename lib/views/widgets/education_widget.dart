@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/common/gap.dart';
-import 'package:portfolio/widgets/work_experience_card.dart';
+import 'package:portfolio/common/line_divider.dart';
+import 'package:portfolio/utils/extensions.dart';
+import 'package:portfolio/utils/text_styles.dart';
 
 class EducationWidget extends StatelessWidget {
   const EducationWidget({super.key});
@@ -10,14 +12,7 @@ class EducationWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Text(
-          'EDUCATION',
-          style: TextStyle(
-            color: Colors.teal.shade700,
-            fontWeight: FontWeight.w600,
-            fontSize: 16.0,
-          ),
-        ),
+        Text('EDUCATION', style: TextStyles.size16TealW600()),
         Gap(height: 8.0),
         Container(
           decoration: BoxDecoration(
@@ -25,9 +20,46 @@ class EducationWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(8.0),
           ),
           padding: EdgeInsets.all(16.0),
-          child: WorkExperienceCard(),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Bachelor of Computer Applications',
+                    style: TextStyles.size16BlackBold(),
+                  ),
+                  Expanded(
+                    child: LineDivider(height: 2.0).horizontalPadding(8.0),
+                  ),
+                  Text('2019 - 2022', style: TextStyles.size16Black()),
+                ],
+              ),
+              Text('Shree Umiya BCA College', style: TextStyles.size16Black()),
+              Text(
+                'Sola Bhagvat, Sola, Ahmedabad',
+                style: TextStyles.size16Black(),
+              ),
+            ],
+          ),
         ),
       ],
     );
   }
 }
+
+
+// class EducationDetails {
+//   String degree;
+//   String collegeName;
+//   String duration;
+//   String address;
+
+//   EducationDetails({
+//     required this.degree,
+//     required this.collegeName,
+//     required this.duration,
+//     required this.address,
+//   });
+// }

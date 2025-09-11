@@ -27,7 +27,7 @@ class ResumeView extends StatelessWidget {
               PersonalInfoWidget(),
               Gap(height: 8.0),
               ProfessionalSummaryWidget(),
-              Gap(height: 6.0),
+              Gap(height: 8.0),
               WorkExperienceWidget(),
               Gap(height: 8.0),
               SkillsWidget(),

@@ -19,7 +19,14 @@ class EducationWidget extends StatelessWidget {
           ),
         ),
         Gap(height: 8.0),
-        WorkExperienceCard(),
+        Container(
+          decoration: BoxDecoration(
+            color: Colors.grey.shade200,
+            borderRadius: BorderRadius.circular(8.0),
+          ),
+          padding: EdgeInsets.all(16.0),
+          child: WorkExperienceCard(),
+        ),
       ],
     );
   }

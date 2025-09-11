@@ -18,15 +18,22 @@ class ProfessionalSummaryWidget extends StatelessWidget {
           ),
         ),
         Gap(height: 6.0),
-        Row(
-          children: [
-            Flexible(
-              child: Text(
-                'Seasoned Flutter Developer with 8+ years of experience crafting high-performance, cross-platform mobile applications. Expertise in Dart, state management, and CI/CD pipelines, with a proven track record of reducing app load times by 40% through optimized widget trees and efficient coding practices. Adept at leading agile development teams and integrating cutting-edge technologies like AI-driven UX and advanced analytics to deliver innovative, user-centric solutions.',
-                textAlign: TextAlign.start,
+        Container(
+          decoration: BoxDecoration(
+            color: Colors.grey.shade200,
+            borderRadius: BorderRadius.circular(8.0),
+          ),
+          padding: EdgeInsets.all(16.0),
+          child: Row(
+            children: [
+              Flexible(
+                child: Text(
+                  'Seasoned Flutter Developer with 8+ years of experience crafting high-performance, cross-platform mobile applications. Expertise in Dart, state management, and CI/CD pipelines, with a proven track record of reducing app load times by 40% through optimized widget trees and efficient coding practices. Adept at leading agile development teams and integrating cutting-edge technologies like AI-driven UX and advanced analytics to deliver innovative, user-centric solutions.',
+                  textAlign: TextAlign.start,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ],
     );

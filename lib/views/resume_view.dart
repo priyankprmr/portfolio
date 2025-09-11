@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/common/gap.dart';
 import 'package:portfolio/utils/extensions.dart';
 
 class ResumeView extends StatelessWidget {
@@ -25,7 +26,7 @@ class ResumeView extends StatelessWidget {
                 fontSize: 30.0,
               ),
             ),
-            gap(height: 10.0),
+            Gap(height: 6.0),
             Row(
               children: [
                 Text('priynk.prmr@gmail.com'),
@@ -37,7 +38,7 @@ class ResumeView extends StatelessWidget {
                 Text('github.com/priyankprmr'),
               ],
             ),
-            gap(height: 10.0),
+            Gap(height: 6.0),
             Text(
               'Flutter Developer',
               style: TextStyle(
@@ -46,22 +47,23 @@ class ResumeView extends StatelessWidget {
                 fontSize: 30.0,
               ),
             ),
-            gap(height: 10.0),
+            Gap(height: 6.0),
             Text('''
 Seasoned Flutter Developer with 8+ years of experience crafting high-performance, cross-platform mobile applications.
 Expertise in Dart, state management, and CI/CD pipelines,
 with a proven track record of reducing app load times by 40% through optimized widget trees and efficient coding practices.
 Adept at leading agile development teams and integrating cutting-edge technologies like AI-driven UX and advanced analytics to deliver innovative, user-centric solutions.
 '''),
-            gap(height: 20.0),
+            Gap(height: 8.0),
             Text(
               'Work Experience',
               style: TextStyle(
                 color: Colors.teal.shade700,
                 fontWeight: FontWeight.w600,
-                fontSize: 14.0,
+                fontSize: 16.0,
               ),
             ),
+            Gap(height: 8.0),
           ],
         ).allPadding(16.0),
       ),
@@ -75,7 +77,4 @@ Adept at leading agile development teams and integrating cutting-edge technologi
       color: Colors.black,
     ).horizontalPadding(padding);
   }
-
-  Widget gap({double? height, double? width}) =>
-      SizedBox(height: height, width: width);
 }

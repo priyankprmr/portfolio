@@ -39,6 +39,7 @@ migrate_working_dir/
 
 # Generated plugin registrants
 **/flutter/generated_plugin_registrant.*
+**/flutter/generated_plugins.*
 
 # iOS / CocoaPods
 ios/Pods/

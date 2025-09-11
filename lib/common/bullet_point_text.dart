@@ -11,8 +11,15 @@ class BulletPointText extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        HorizontalDotSpacer().verticalPadding(6.0),
-        Flexible(child: Text(_text)),
+        HorizontalDotSpacer(
+          size: 6.0,
+        ).symmetricPadding(vertical: 6.0, horizontal: 8.0),
+        Flexible(
+          child: Text(
+            _text,
+            style: TextStyle(fontSize: 12.0, fontFamily: 'Roobert,sans-serif'),
+          ),
+        ),
       ],
     );
   }

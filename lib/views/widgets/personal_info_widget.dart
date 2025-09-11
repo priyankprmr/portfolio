@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/common/horizontal_dot_spacer.dart';
 import 'package:portfolio/common/line_divider.dart';
+import 'package:web/web.dart' as web;
 
 class PersonalInfoWidget extends StatelessWidget {
   const PersonalInfoWidget({super.key});
+
+  static const String _linkedinLink = 'linkedin.com/in/priyankprmr';
+  static const String _githubLink = 'linkedin.com/in/priyankprmr';
 
   @override
   Widget build(BuildContext context) {
@@ -25,9 +29,19 @@ class PersonalInfoWidget extends StatelessWidget {
             HorizontalDotSpacer(padding: 14.0),
             Text('+91-9265496342'),
             HorizontalDotSpacer(padding: 14.0),
-            Text('linkedin.com/in/priyankprmr'),
+            GestureDetector(
+              onTap: () {
+                web.window.open('https://$_linkedinLink');
+              },
+              child: Text(_linkedinLink),
+            ),
             HorizontalDotSpacer(padding: 14.0),
-            Text('github.com/priyankprmr'),
+            GestureDetector(
+              onTap: () {
+                web.window.open('https://$_githubLink');
+              },
+              child: Text('github.com/priyankprmr'),
+            ),
           ],
         ),
       ],

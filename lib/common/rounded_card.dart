@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/utils/extensions.dart';
 
-class SkillCard extends StatelessWidget {
+class RoundedCard extends StatelessWidget {
   final String _text;
-  const SkillCard({super.key, required String text}) : _text = text;
+  const RoundedCard({super.key, required String text}) : _text = text;
 
   @override
   Widget build(BuildContext context) {

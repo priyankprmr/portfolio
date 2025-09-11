@@ -7,7 +7,7 @@ class PersonalInfoWidget extends StatelessWidget {
   const PersonalInfoWidget({super.key});
 
   static const String _linkedinLink = 'linkedin.com/in/priyankprmr';
-  static const String _githubLink = 'linkedin.com/in/priyankprmr';
+  static const String _githubLink = 'github.com/priyankprmr';
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +40,7 @@ class PersonalInfoWidget extends StatelessWidget {
               onTap: () {
                 web.window.open('https://$_githubLink');
               },
-              child: Text('github.com/priyankprmr'),
+              child: Text(_githubLink),
             ),
           ],
         ),

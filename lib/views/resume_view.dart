@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/common/gap.dart';
 import 'package:portfolio/utils/extensions.dart';
+import 'package:portfolio/views/widgets/education_widget.dart';
+import 'package:portfolio/views/widgets/personal_info_widget.dart';
+import 'package:portfolio/views/widgets/professional_summary_widget.dart';
+import 'package:portfolio/views/widgets/skills_widget.dart';
+import 'package:portfolio/views/widgets/work_experience_widget.dart';
 
 class ResumeView extends StatelessWidget {
   const ResumeView({super.key});
@@ -15,66 +20,24 @@ class ResumeView extends StatelessWidget {
           border: Border.all(color: Colors.black),
           borderRadius: BorderRadius.circular(8.0),
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Text(
-              'Priyank Parmar',
-              style: TextStyle(
-                color: Colors.teal.shade700,
-                fontWeight: FontWeight.w600,
-                fontSize: 30.0,
-              ),
-            ),
-            Gap(height: 6.0),
-            Row(
-              children: [
-                Text('priynk.prmr@gmail.com'),
-                horizontalDotSpacer(padding: 14.0),
-                Text('+91-9265496342'),
-                horizontalDotSpacer(padding: 14.0),
-                Text('linkedin.com/in/priyankprmr'),
-                horizontalDotSpacer(padding: 14.0),
-                Text('github.com/priyankprmr'),
-              ],
-            ),
-            Gap(height: 6.0),
-            Text(
-              'Flutter Developer',
-              style: TextStyle(
-                color: Colors.teal.shade700,
-                fontWeight: FontWeight.w600,
-                fontSize: 30.0,
-              ),
-            ),
-            Gap(height: 6.0),
-            Text('''
-Seasoned Flutter Developer with 8+ years of experience crafting high-performance, cross-platform mobile applications.
-Expertise in Dart, state management, and CI/CD pipelines,
-with a proven track record of reducing app load times by 40% through optimized widget trees and efficient coding practices.
-Adept at leading agile development teams and integrating cutting-edge technologies like AI-driven UX and advanced analytics to deliver innovative, user-centric solutions.
-'''),
-            Gap(height: 8.0),
-            Text(
-              'Work Experience',
-              style: TextStyle(
-                color: Colors.teal.shade700,
-                fontWeight: FontWeight.w600,
-                fontSize: 16.0,
-              ),
-            ),
-            Gap(height: 8.0),
-          ],
-        ).allPadding(16.0),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              PersonalInfoWidget(),
+              Gap(height: 8.0),
+              ProfessionalSummaryWidget(),
+              Gap(height: 6.0),
+              WorkExperienceWidget(),
+              Gap(height: 8.0),
+              SkillsWidget(),
+              Gap(height: 8.0),
+              EducationWidget(),
+              Gap(height: 8.0),
+            ],
+          ).allPadding(16.0),
+        ),
       ),
     );
-  }
-
-  Widget horizontalDotSpacer({double size = 4.0, double padding = 8.0}) {
-    return Icon(
-      Icons.circle,
-      size: size,
-      color: Colors.black,
-    ).horizontalPadding(padding);
   }
 }

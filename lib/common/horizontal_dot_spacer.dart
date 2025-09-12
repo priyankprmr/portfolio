@@ -23,10 +23,19 @@ class HorizontalDotSpacer extends StatelessWidget {
   }
 
   pw.Widget toPW() {
-    return pw.Icon(
-      pw.IconData(0xe163),
-      size: _size,
-      color: PdfColors.black,
-    ).horizontalPadding(_padding);
+    return pw.Container(
+      height: _size * 0.5,
+      width: _size * 0.5,
+      margin: pw.EdgeInsets.symmetric(horizontal: _padding),
+      decoration: pw.BoxDecoration(
+        color: PdfColors.black,
+        shape: pw.BoxShape.circle,
+      ),
+    );
+    //  pw.Icon(
+    //   pw.IconData(0xe163),
+    //   size: _size,
+    //   color: PdfColors.black,
+    // ).horizontalPadding(_padding);
   }
 }

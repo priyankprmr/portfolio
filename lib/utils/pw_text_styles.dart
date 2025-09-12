@@ -21,7 +21,7 @@ class PwTextStyles {
   static pw.TextStyle size30TealW600() {
     return pw.TextStyle(
       font: _latoBold,
-      fontSize: 30,
+      fontSize: 24,
       color: PdfColors.teal700,
     );
   }
@@ -29,7 +29,7 @@ class PwTextStyles {
   static pw.TextStyle size16TealW600() {
     return pw.TextStyle(
       font: _latoBold,
-      fontSize: 16,
+      fontSize: 11,
       color: PdfColors.teal700,
     );
   }
@@ -37,7 +37,7 @@ class PwTextStyles {
   static pw.TextStyle size12Black() {
     return pw.TextStyle(
       font: _latoRegular,
-      fontSize: 12,
+      // fontSize: 12,
       color: PdfColors.black,
     );
   }
@@ -45,7 +45,7 @@ class PwTextStyles {
   static pw.TextStyle size14Black() {
     return pw.TextStyle(
       font: _latoRegular,
-      fontSize: 14,
+      // fontSize: 14,
       color: PdfColors.black,
     );
   }
@@ -53,7 +53,7 @@ class PwTextStyles {
   static pw.TextStyle size14White() {
     return pw.TextStyle(
       font: _latoRegular,
-      fontSize: 14,
+      // fontSize: 14,
       color: PdfColors.white,
     );
   }
@@ -61,7 +61,7 @@ class PwTextStyles {
   static pw.TextStyle size16Black() {
     return pw.TextStyle(
       font: _latoRegular,
-      fontSize: 16,
+      fontSize: 11,
       color: PdfColors.black,
     );
   }

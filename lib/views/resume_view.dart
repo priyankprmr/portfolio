@@ -45,17 +45,17 @@ class ResumeView extends StatelessWidget {
             crossAxisAlignment: pw.CrossAxisAlignment.stretch,
             children: [
               PersonalInfoWidget().toPW(),
-              Gap(height: 12.0).toPW(),
+              Gap(height: 4.0).toPW(),
               ProfessionalSummaryWidget().toPW(),
-              Gap(height: 12.0).toPW(),
+              Gap(height: 4.0).toPW(),
               WorkExperienceWidget().toPW(),
-              Gap(height: 12.0).toPW(),
+              Gap(height: 4.0).toPW(),
               SkillsWidget().toPW(),
-              Gap(height: 12.0).toPW(),
+              Gap(height: 4.0).toPW(),
               EducationWidget().toPW(),
-              Gap(height: 12.0).toPW(),
+              Gap(height: 4.0).toPW(),
             ],
-          ).allPadding(16.0);
+          );
         },
       ),
     );
@@ -78,6 +78,7 @@ class ResumeView extends StatelessWidget {
         },
         child: Icon(Icons.download_rounded, color: Colors.white),
       ),
+
       body: Container(
         padding: EdgeInsetsGeometry.all(16.0),
         margin: EdgeInsetsGeometry.all(16.0),

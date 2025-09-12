@@ -11,10 +11,10 @@ class PwTextStyles {
   /// Call this once before using the styles
   static Future<void> init() async {
     _latoRegular = pw.Font.ttf(
-      await rootBundle.load("assets/fonts/Lato-Regular.ttf"),
+      await rootBundle.load("assets/fonts/Lato/Lato-Regular.ttf"),
     );
     _latoBold = pw.Font.ttf(
-      await rootBundle.load("assets/fonts/Lato-Bold.ttf"),
+      await rootBundle.load("assets/fonts/Lato/Lato-Bold.ttf"),
     );
   }
 

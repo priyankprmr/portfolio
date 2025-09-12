@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/common/horizontal_dot_spacer.dart';
 import 'package:portfolio/common/line_divider.dart';
 import 'package:portfolio/utils/const_texts.dart';
+import 'package:portfolio/utils/pw_text_styles.dart';
 import 'package:portfolio/utils/text_styles.dart';
 // ignore: depend_on_referenced_packages
 import 'package:web/web.dart' as web;
+import 'package:pdf/widgets.dart' as pw;
 
 class PersonalInfoWidget extends StatelessWidget {
   const PersonalInfoWidget({super.key});
@@ -121,6 +123,38 @@ class PersonalInfoWidget extends StatelessWidget {
               );
             }
           },
+        ),
+      ],
+    );
+  }
+
+  pw.Widget toPW() {
+    return pw.Column(
+      crossAxisAlignment: pw.CrossAxisAlignment.stretch,
+      children: [
+        pw.Text(ConstTexts.name, style: PwTextStyles.size30TealW600()),
+        LineDivider(padding: 8.0, height: 3.0).toPW(),
+        pw.Row(
+          children: [
+            // Text(constraints.maxWidth.toString()),
+            pw.Text(ConstTexts.email, style: PwTextStyles.size12Black()),
+            HorizontalDotSpacer(padding: 14.0).toPW(),
+            pw.Text(ConstTexts.phoneNumber, style: PwTextStyles.size12Black()),
+            HorizontalDotSpacer(padding: 14.0).toPW(),
+            pw.Text(
+              ConstTexts.linkedinProfile,
+              style: PwTextStyles.size12Black().copyWith(
+                decoration: pw.TextDecoration.underline,
+              ),
+            ),
+            HorizontalDotSpacer(padding: 14.0).toPW(),
+            pw.Text(
+              ConstTexts.githubProfile,
+              style: PwTextStyles.size12Black().copyWith(
+                decoration: pw.TextDecoration.underline,
+              ),
+            ),
+          ],
         ),
       ],
     );

@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/common/bullet_point_text.dart';
 import 'package:portfolio/common/line_divider.dart';
 import 'package:portfolio/utils/extensions.dart';
+import 'package:portfolio/utils/pw_text_styles.dart';
 import 'package:portfolio/utils/text_styles.dart';
 import 'package:portfolio/views/widgets/work_experience_widget.dart';
+import 'package:pdf/widgets.dart' as pw;
 
 class WorkExperienceCard extends StatelessWidget {
   final bool _showLine;
@@ -37,6 +39,39 @@ class WorkExperienceCard extends StatelessWidget {
               .map(
                 (summary) =>
                     BulletPointText(text: summary).verticalPadding(4.0),
+              )
+              .toList(),
+        ),
+      ],
+    ).verticalPadding(8.0);
+  }
+
+  pw.Widget toPW() {
+    return pw.Column(
+      crossAxisAlignment: pw.CrossAxisAlignment.stretch,
+      children: [
+        pw.Row(
+          mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
+          children: [
+            pw.Text(
+              _jobDetails.designation,
+              style: PwTextStyles.size16BlackBold(),
+            ),
+            if (_showLine)
+              pw.Expanded(
+                child: LineDivider(height: 2.0).toPW().horizontalPadding(8.0),
+              ),
+            pw.Text(_jobDetails.duration, style: PwTextStyles.size16Black()),
+          ],
+        ),
+        pw.Text(_jobDetails.company, style: PwTextStyles.size16Black()),
+        pw.Column(
+          mainAxisAlignment: pw.MainAxisAlignment.start,
+          crossAxisAlignment: pw.CrossAxisAlignment.stretch,
+          children: _jobDetails.workSummary
+              .map(
+                (summary) =>
+                    BulletPointText(text: summary).toPW().verticalPadding(4.0),
               )
               .toList(),
         ),

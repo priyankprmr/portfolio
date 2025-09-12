@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/common/gap.dart';
+import 'package:portfolio/common/grey_box.dart';
 import 'package:portfolio/common/rounded_card.dart';
+import 'package:portfolio/utils/const_texts.dart';
+import 'package:portfolio/utils/pw_text_styles.dart';
 import 'package:portfolio/utils/text_styles.dart';
+import 'package:pdf/widgets.dart' as pw;
 
 class SkillsWidget extends StatelessWidget {
   const SkillsWidget({super.key});
@@ -27,18 +31,32 @@ class SkillsWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Text('SKILLS', style: TextStyles.size16TealW600()),
+        Text(ConstTexts.skillsTitle, style: TextStyles.size16TealW600()),
         Gap(height: 8.0),
-        Container(
-          decoration: BoxDecoration(
-            color: Colors.grey.shade200,
-            borderRadius: BorderRadius.circular(8.0),
-          ),
-          padding: EdgeInsets.all(16.0),
+        GreyBox(
           child: Wrap(
             spacing: 8.0,
             runSpacing: 8.0,
             children: [..._skills.map((skill) => RoundedCard(text: skill))],
+          ),
+        ),
+      ],
+    );
+  }
+
+  pw.Widget toPW() {
+    return pw.Column(
+      crossAxisAlignment: pw.CrossAxisAlignment.stretch,
+      children: [
+        pw.Text(ConstTexts.skillsTitle, style: PwTextStyles.size16TealW600()),
+        Gap(height: 8.0).toPW(),
+        GreyBox().toPW(
+          child: pw.Wrap(
+            spacing: 8.0,
+            runSpacing: 8.0,
+            children: [
+              ..._skills.map((skill) => RoundedCard(text: skill).toPW()),
+            ],
           ),
         ),
       ],

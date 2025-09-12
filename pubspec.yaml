@@ -1,6 +1,6 @@
 name: portfolio
 description: "A new Flutter project."
-publish_to: 'none'
+publish_to: "none"
 version: 0.1.0
 
 environment:
@@ -19,8 +19,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-  fonts:
-    - family: Lato
-      fonts:
-        - asset: assets/fonts/Lato-Regular.ttf
-        - asset: assets/fonts/Lato-Bold.ttf
+  assets:
+    - assets/fonts/Lato/Lato-Regular.ttf
+    - assets/fonts/Lato/Lato-Bold.ttf

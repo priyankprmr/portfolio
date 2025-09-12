@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/common/gap.dart';
+import 'package:portfolio/common/grey_box.dart';
+import 'package:portfolio/utils/const_texts.dart';
+import 'package:portfolio/utils/pw_text_styles.dart';
 import 'package:portfolio/utils/text_styles.dart';
+import 'package:pdf/widgets.dart' as pw;
 
 class ProfessionalSummaryWidget extends StatelessWidget {
   const ProfessionalSummaryWidget({super.key});
@@ -10,21 +14,39 @@ class ProfessionalSummaryWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Text('Flutter Developer', style: TextStyles.size30TealW600()),
+        Text(ConstTexts.designation, style: TextStyles.size30TealW600()),
         Gap(height: 6.0),
-        Container(
-          decoration: BoxDecoration(
-            color: Colors.grey.shade200,
-            borderRadius: BorderRadius.circular(8.0),
-          ),
-          padding: EdgeInsets.all(16.0),
+        GreyBox(
           child: Row(
             children: [
               Flexible(
                 child: Text(
-                  'Flutter developer with 3 years of experience delivering 6 live projects. Skilled in building cross-platform and web applications with strong expertise in Firebase integration, authentication, and cloud services. Proficient in state management using Riverpod, GetX, and Provider. Experienced in API integration and local storage.',
+                  ConstTexts.profSummary,
                   textAlign: TextAlign.start,
                   style: TextStyles.size14Black(),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
+  pw.Widget toPW() {
+    return pw.Column(
+      crossAxisAlignment: pw.CrossAxisAlignment.stretch,
+      children: [
+        pw.Text(ConstTexts.designation, style: PwTextStyles.size30TealW600()),
+        Gap(height: 6.0).toPW(),
+        GreyBox().toPW(
+          child: pw.Row(
+            children: [
+              pw.Flexible(
+                child: pw.Text(
+                  ConstTexts.profSummary,
+                  textAlign: pw.TextAlign.start,
+                  style: PwTextStyles.size14Black(),
                 ),
               ),
             ],

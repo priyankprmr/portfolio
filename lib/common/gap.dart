@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pdf/widgets.dart' as pw;
 
 class Gap extends StatelessWidget {
   final double _height;
@@ -10,5 +11,9 @@ class Gap extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(height: _height, width: _width);
+  }
+
+  pw.Widget toPW() {
+    return pw.SizedBox(height: _height, width: _width);
   }
 }

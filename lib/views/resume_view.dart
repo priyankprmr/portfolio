@@ -7,12 +7,57 @@ import 'package:portfolio/views/widgets/professional_summary_widget.dart';
 import 'package:portfolio/views/widgets/skills_widget.dart';
 import 'package:portfolio/views/widgets/work_experience_widget.dart';
 
+import 'package:pdf/pdf.dart';
+import 'package:pdf/widgets.dart' as pw;
+
 class ResumeView extends StatelessWidget {
   const ResumeView({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final pdf = pw.Document();
+
+    final widgetsTree = Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        PersonalInfoWidget(),
+        Gap(height: 12.0),
+        ProfessionalSummaryWidget(),
+        Gap(height: 12.0),
+        WorkExperienceWidget(),
+        Gap(height: 12.0),
+        SkillsWidget(),
+        Gap(height: 12.0),
+        EducationWidget(),
+        Gap(height: 12.0),
+      ],
+    ).allPadding(16.0);
+
+    // pdf.addPage(pw.Page(build: (context) {
+    //   return pw.Column(
+    //   crossAxisAlignment: pw.CrossAxisAlignment.stretch,
+    //   children: [
+    //     PersonalInfoWidget(),
+    //     Gap(height: 12.0),
+    //     ProfessionalSummaryWidget(),
+    //     Gap(height: 12.0),
+    //     WorkExperienceWidget(),
+    //     Gap(height: 12.0),
+    //     SkillsWidget(),
+    //     Gap(height: 12.0),
+    //     EducationWidget(),
+    //     Gap(height: 12.0),
+    //   ],
+    // ).allPadding(16.0);
+    // }));
+
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.teal.shade700,
+
+        onPressed: () {},
+        child: Icon(Icons.download_rounded, color: Colors.white),
+      ),
       body: Container(
         padding: EdgeInsetsGeometry.all(16.0),
         margin: EdgeInsetsGeometry.all(16.0),
@@ -20,23 +65,7 @@ class ResumeView extends StatelessWidget {
           border: Border.all(color: Colors.black),
           borderRadius: BorderRadius.circular(8.0),
         ),
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              PersonalInfoWidget(),
-              Gap(height: 12.0),
-              ProfessionalSummaryWidget(),
-              Gap(height: 12.0),
-              WorkExperienceWidget(),
-              Gap(height: 12.0),
-              SkillsWidget(),
-              Gap(height: 12.0),
-              EducationWidget(),
-              Gap(height: 12.0),
-            ],
-          ).allPadding(16.0),
-        ),
+        child: SingleChildScrollView(child: widgetsTree),
       ),
     );
   }

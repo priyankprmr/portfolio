@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/utils/extensions.dart';
+import 'package:pdf/pdf.dart' show PdfColors;
+import 'package:pdf/widgets.dart' as pw;
 
 class LineDivider extends StatelessWidget {
   final double _height;
@@ -13,6 +15,13 @@ class LineDivider extends StatelessWidget {
     return Container(
       height: _height,
       color: Colors.teal.shade700,
+    ).verticalPadding(_padding);
+  }
+
+  pw.Widget toPW() {
+    return pw.Container(
+      height: _height,
+      color: PdfColors.teal700,
     ).verticalPadding(_padding);
   }
 }

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/utils/pw_text_styles.dart';
 import 'package:portfolio/views/resume_view.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await PwTextStyles.init();
   runApp(const MainApp());
 }
 

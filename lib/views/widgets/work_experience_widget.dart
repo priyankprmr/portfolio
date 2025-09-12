@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/common/gap.dart';
 import 'package:portfolio/utils/text_styles.dart';
-import 'package:portfolio/widgets/work_experience_card.dart';
+import 'package:portfolio/views/widgets/work_experience_card.dart';
 
 class JobDetails {
   String designation;

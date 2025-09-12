@@ -20,7 +20,6 @@ class SkillsWidget extends StatelessWidget {
     'Git',
     'Web',
     'Figma',
-    'Agora SDK',
   ];
 
   @override

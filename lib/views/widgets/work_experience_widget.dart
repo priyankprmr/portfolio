@@ -54,7 +54,7 @@ class WorkExperienceWidget extends StatelessWidget {
                   duration: '05/22 - 08/24',
                   workSummary: [
                     'Built a Flutter app with custom UI, Firebase integration, real-time chat, and graph visualizations',
-                    'Developed a chat-based dating app, implementing Firebase chat and audio/video calling with Agora',
+                    'Developed a chat-based dating app, implementing Firebase chat and worked on audio/video calling with Agora',
                     'Migrated a native Android app to Flutter, recreating a complex UI with extensive SVG and PNG assets',
                   ],
                 ),

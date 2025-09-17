@@ -56,35 +56,31 @@ class EducationWidget extends StatelessWidget {
           style: PwTextStyles.size16TealW600(),
         ),
         Gap(height: 8.0).toPW(),
-        GreyBox().toPW(
-          child: pw.Column(
-            crossAxisAlignment: pw.CrossAxisAlignment.stretch,
-            children: [
-              pw.Row(
-                mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
-                children: [
-                  pw.Text(
-                    'Bachelor of Computer Applications',
-                    style: PwTextStyles.size16BlackBold(),
-                  ),
-                  pw.Expanded(
-                    child: LineDivider(
-                      height: 2.0,
-                    ).toPW().horizontalPadding(8.0),
-                  ),
-                  pw.Text('2019 - 2022', style: PwTextStyles.size16Black()),
-                ],
-              ),
-              pw.Text(
-                'Shree Umiya BCA College',
-                style: PwTextStyles.size16Black(),
-              ),
-              pw.Text(
-                'Sola Bhagvat, Sola, Ahmedabad',
-                style: PwTextStyles.size16Black(),
-              ),
-            ],
-          ),
+        pw.Column(
+          crossAxisAlignment: pw.CrossAxisAlignment.stretch,
+          children: [
+            pw.Row(
+              mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
+              children: [
+                pw.Text(
+                  'Bachelor of Computer Applications',
+                  style: PwTextStyles.size16BlackBold(),
+                ),
+                pw.Expanded(
+                  child: LineDivider(height: 2.0).toPW().horizontalPadding(8.0),
+                ),
+                pw.Text('2019 - 2022', style: PwTextStyles.size16Black()),
+              ],
+            ),
+            pw.Text(
+              'Shree Umiya BCA College',
+              style: PwTextStyles.size16Black(),
+            ),
+            pw.Text(
+              'Sola Bhagvat, Sola, Ahmedabad',
+              style: PwTextStyles.size16Black(),
+            ),
+          ],
         ),
       ],
     );

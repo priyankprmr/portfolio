@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/common/gap.dart';
-import 'package:portfolio/common/grey_box.dart';
 import 'package:portfolio/utils/const_texts.dart';
 import 'package:portfolio/utils/pw_text_styles.dart';
 import 'package:portfolio/utils/text_styles.dart';
@@ -57,12 +56,10 @@ class WorkExperienceWidget extends StatelessWidget {
           style: TextStyles.size16TealW600(),
         ),
         Gap(height: 8.0),
-        GreyBox(
-          child: Column(
-            children: [
-              ..._jobs.map((job) => WorkExperienceCard(jobDetails: job)),
-            ],
-          ),
+        Column(
+          children: [
+            ..._jobs.map((job) => WorkExperienceCard(jobDetails: job)),
+          ],
         ),
       ],
     );
@@ -77,12 +74,10 @@ class WorkExperienceWidget extends StatelessWidget {
           style: PwTextStyles.size16TealW600(),
         ),
         Gap(height: 8.0).toPW(),
-        GreyBox().toPW(
-          child: pw.Column(
-            children: [
-              ..._jobs.map((job) => WorkExperienceCard(jobDetails: job).toPW()),
-            ],
-          ),
+        pw.Column(
+          children: [
+            ..._jobs.map((job) => WorkExperienceCard(jobDetails: job).toPW()),
+          ],
         ),
       ],
     );

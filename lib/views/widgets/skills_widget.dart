@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/common/gap.dart';
-import 'package:portfolio/common/grey_box.dart';
 import 'package:portfolio/common/rounded_card.dart';
 import 'package:portfolio/utils/const_texts.dart';
 import 'package:portfolio/utils/pw_text_styles.dart';
@@ -33,12 +32,10 @@ class SkillsWidget extends StatelessWidget {
       children: [
         Text(ConstTexts.skillsTitle, style: TextStyles.size16TealW600()),
         Gap(height: 8.0),
-        GreyBox(
-          child: Wrap(
-            spacing: 8.0,
-            runSpacing: 8.0,
-            children: [..._skills.map((skill) => RoundedCard(text: skill))],
-          ),
+        Wrap(
+          spacing: 8.0,
+          runSpacing: 8.0,
+          children: [..._skills.map((skill) => RoundedCard(text: skill))],
         ),
       ],
     );
@@ -50,14 +47,12 @@ class SkillsWidget extends StatelessWidget {
       children: [
         pw.Text(ConstTexts.skillsTitle, style: PwTextStyles.size16TealW600()),
         Gap(height: 8.0).toPW(),
-        GreyBox().toPW(
-          child: pw.Wrap(
-            spacing: 8.0,
-            runSpacing: 8.0,
-            children: [
-              ..._skills.map((skill) => RoundedCard(text: skill).toPW()),
-            ],
-          ),
+        pw.Wrap(
+          spacing: 8.0,
+          runSpacing: 8.0,
+          children: [
+            ..._skills.map((skill) => RoundedCard(text: skill).toPW()),
+          ],
         ),
       ],
     );

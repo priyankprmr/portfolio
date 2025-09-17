@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/common/gap.dart';
-import 'package:portfolio/common/grey_box.dart';
 import 'package:portfolio/utils/const_texts.dart';
 import 'package:portfolio/utils/pw_text_styles.dart';
 import 'package:portfolio/utils/text_styles.dart';
@@ -16,18 +15,16 @@ class ProfessionalSummaryWidget extends StatelessWidget {
       children: [
         Text(ConstTexts.designation, style: TextStyles.size30TealW600()),
         Gap(height: 6.0),
-        GreyBox(
-          child: Row(
-            children: [
-              Flexible(
-                child: Text(
-                  ConstTexts.profSummary,
-                  textAlign: TextAlign.start,
-                  style: TextStyles.size14Black(),
-                ),
+        Row(
+          children: [
+            Flexible(
+              child: Text(
+                ConstTexts.profSummary,
+                textAlign: TextAlign.start,
+                style: TextStyles.size14Black(),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ],
     );
@@ -39,18 +36,16 @@ class ProfessionalSummaryWidget extends StatelessWidget {
       children: [
         pw.Text(ConstTexts.designation, style: PwTextStyles.size30TealW600()),
         Gap(height: 6.0).toPW(),
-        GreyBox().toPW(
-          child: pw.Row(
-            children: [
-              pw.Flexible(
-                child: pw.Text(
-                  ConstTexts.profSummary,
-                  textAlign: pw.TextAlign.start,
-                  style: PwTextStyles.size14Black(),
-                ),
+        pw.Row(
+          children: [
+            pw.Flexible(
+              child: pw.Text(
+                ConstTexts.profSummary,
+                textAlign: pw.TextAlign.start,
+                style: PwTextStyles.size14Black(),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ],
     );

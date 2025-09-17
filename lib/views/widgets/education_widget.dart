@@ -22,11 +22,15 @@ class EducationWidget extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  'Bachelor of Computer Applications',
-                  style: TextStyles.size16BlackBold(),
+                Flexible(
+                  child: Text(
+                    'Bachelors of Computer Applications',
+                    style: TextStyles.size16BlackBold(),
+                  ),
                 ),
-                Text('2019 - 2022', style: TextStyles.size16Black()),
+                Flexible(
+                  child: Text('2019 - 2022', style: TextStyles.size16Black()),
+                ),
               ],
             ),
             Text('Shree Umiya BCA College', style: TextStyles.size16Black()),
@@ -55,11 +59,18 @@ class EducationWidget extends StatelessWidget {
             pw.Row(
               mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
               children: [
-                pw.Text(
-                  'Bachelor of Computer Applications',
-                  style: PwTextStyles.size14BlackBold(),
+                pw.Flexible(
+                  child: pw.Text(
+                    'Bachelor of Computer Applications',
+                    style: PwTextStyles.size14BlackBold(),
+                  ),
                 ),
-                pw.Text('2019 - 2022', style: PwTextStyles.size12Black()),
+                pw.Flexible(
+                  child: pw.Text(
+                    '2019 - 2022',
+                    style: PwTextStyles.size12Black(),
+                  ),
+                ),
               ],
             ),
             pw.Text(

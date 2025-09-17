@@ -23,10 +23,20 @@ class WorkExperienceCard extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(_jobDetails.designation, style: TextStyles.size16BlackBold()),
+            Flexible(
+              child: Text(
+                _jobDetails.designation,
+                style: TextStyles.size16BlackBold(),
+              ),
+            ),
 
             // if (_showLine)
-            Text(_jobDetails.duration, style: TextStyles.size16Black()),
+            Flexible(
+              child: Text(
+                _jobDetails.duration,
+                style: TextStyles.size16Black(),
+              ),
+            ),
           ],
         ),
         Text(_jobDetails.company, style: TextStyles.size16Black()),
@@ -51,11 +61,18 @@ class WorkExperienceCard extends StatelessWidget {
         pw.Row(
           mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
           children: [
-            pw.Text(
-              _jobDetails.designation,
-              style: PwTextStyles.size14BlackBold(),
+            pw.Flexible(
+              child: pw.Text(
+                _jobDetails.designation,
+                style: PwTextStyles.size14BlackBold(),
+              ),
             ),
-            pw.Text(_jobDetails.duration, style: PwTextStyles.size12Black()),
+            pw.Flexible(
+              child: pw.Text(
+                _jobDetails.duration,
+                style: PwTextStyles.size12Black(),
+              ),
+            ),
           ],
         ),
         Gap(height: 4.0).toPW(),

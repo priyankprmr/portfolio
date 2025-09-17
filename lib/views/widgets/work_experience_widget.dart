@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/common/gap.dart';
 import 'package:portfolio/utils/const_texts.dart';
+import 'package:portfolio/utils/extensions.dart';
 import 'package:portfolio/utils/pw_text_styles.dart';
 import 'package:portfolio/utils/text_styles.dart';
 import 'package:portfolio/views/widgets/work_experience_card.dart';
@@ -58,7 +59,9 @@ class WorkExperienceWidget extends StatelessWidget {
         Gap(height: 8.0),
         Column(
           children: [
-            ..._jobs.map((job) => WorkExperienceCard(jobDetails: job)),
+            ..._jobs.map(
+              (job) => WorkExperienceCard(jobDetails: job).verticalPadding(4.0),
+            ),
           ],
         ),
       ],

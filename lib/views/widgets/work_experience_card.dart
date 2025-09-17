@@ -58,7 +58,8 @@ class WorkExperienceCard extends StatelessWidget {
             pw.Text(_jobDetails.duration, style: PwTextStyles.size12Black()),
           ],
         ),
-        pw.Text(_jobDetails.company, style: PwTextStyles.size14Black()),
+        Gap(height: 4.0).toPW(),
+        pw.Text(_jobDetails.company, style: PwTextStyles.size12Black()),
         Gap(height: 4.0).toPW(),
         pw.Column(
           mainAxisAlignment: pw.MainAxisAlignment.start,

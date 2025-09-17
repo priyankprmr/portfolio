@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio/common/gap.dart';
 import 'package:portfolio/common/horizontal_dot_spacer.dart';
-import 'package:portfolio/common/line_divider.dart';
 import 'package:portfolio/utils/const_texts.dart';
 import 'package:portfolio/utils/pw_text_styles.dart';
 import 'package:portfolio/utils/text_styles.dart';
@@ -18,7 +18,7 @@ class PersonalInfoWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Text(ConstTexts.name, style: TextStyles.size30TealW600()),
-        LineDivider(padding: 8.0, height: 1.0),
+        Gap(height: 8.0),
         LayoutBuilder(
           builder: (context, constraints) {
             if (constraints.maxWidth > 615) {
@@ -132,25 +132,24 @@ class PersonalInfoWidget extends StatelessWidget {
     return pw.Column(
       crossAxisAlignment: pw.CrossAxisAlignment.stretch,
       children: [
-        pw.Text(ConstTexts.name, style: PwTextStyles.size30TealW600()),
-        LineDivider(padding: 8.0, height: 1.0).toPW(),
+        pw.Text(ConstTexts.name, style: PwTextStyles.size18TealW600()),
+        Gap(height: 8.0).toPW(),
         pw.Row(
           children: [
-            // Text(constraints.maxWidth.toString()),
-            pw.Text(ConstTexts.email, style: PwTextStyles.size12Black()),
+            pw.Text(ConstTexts.email, style: PwTextStyles.size10Black()),
             HorizontalDotSpacer(padding: 8.0).toPW(),
-            pw.Text(ConstTexts.phoneNumber, style: PwTextStyles.size12Black()),
+            pw.Text(ConstTexts.phoneNumber, style: PwTextStyles.size10Black()),
             HorizontalDotSpacer(padding: 8.0).toPW(),
             pw.Text(
               ConstTexts.linkedinProfile,
-              style: PwTextStyles.size12Black().copyWith(
+              style: PwTextStyles.size10Black().copyWith(
                 decoration: pw.TextDecoration.underline,
               ),
             ),
             HorizontalDotSpacer(padding: 8.0).toPW(),
             pw.Text(
               ConstTexts.githubProfile,
-              style: PwTextStyles.size12Black().copyWith(
+              style: PwTextStyles.size10Black().copyWith(
                 decoration: pw.TextDecoration.underline,
               ),
             ),

@@ -34,7 +34,7 @@ class ProfessionalSummaryWidget extends StatelessWidget {
     return pw.Column(
       crossAxisAlignment: pw.CrossAxisAlignment.stretch,
       children: [
-        pw.Text(ConstTexts.designation, style: PwTextStyles.size30TealW600()),
+        pw.Text(ConstTexts.designation, style: PwTextStyles.size18TealW600()),
         Gap(height: 6.0).toPW(),
         pw.Row(
           children: [
@@ -42,7 +42,7 @@ class ProfessionalSummaryWidget extends StatelessWidget {
               child: pw.Text(
                 ConstTexts.profSummary,
                 textAlign: pw.TextAlign.start,
-                style: PwTextStyles.size14Black(),
+                style: PwTextStyles.size12Black(),
               ),
             ),
           ],

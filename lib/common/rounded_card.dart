@@ -24,17 +24,17 @@ class RoundedCard extends StatelessWidget {
     );
   }
 
-  pw.Widget toPW(){
+  pw.Widget toPW() {
     return pw.Container(
-      padding: pw.EdgeInsets.all(8.0),
+      padding: pw.EdgeInsets.all(4.0),
       decoration: pw.BoxDecoration(
         color: PdfColors.teal700,
-        borderRadius: pw.BorderRadius.circular(18.0),
+        borderRadius: pw.BorderRadius.circular(12.0),
       ),
       child: pw.Text(
         _text,
-        style: PwTextStyles.size14White(),
-      ).horizontalPadding(8.0),
+        style: PwTextStyles.size12White(),
+      ).horizontalPadding(4.0),
     );
   }
 }

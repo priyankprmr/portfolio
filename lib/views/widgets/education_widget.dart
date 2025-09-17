@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/common/gap.dart';
-import 'package:portfolio/common/grey_box.dart';
-import 'package:portfolio/common/line_divider.dart';
 import 'package:portfolio/utils/const_texts.dart';
 import 'package:portfolio/utils/extensions.dart';
 import 'package:portfolio/utils/pw_text_styles.dart';
@@ -18,30 +16,25 @@ class EducationWidget extends StatelessWidget {
       children: [
         Text(ConstTexts.educationTitle, style: TextStyles.size16TealW600()),
         Gap(height: 8.0),
-        GreyBox(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'Bachelor of Computer Applications',
-                    style: TextStyles.size16BlackBold(),
-                  ),
-                  Expanded(
-                    child: LineDivider(height: 2.0).horizontalPadding(8.0),
-                  ),
-                  Text('2019 - 2022', style: TextStyles.size16Black()),
-                ],
-              ),
-              Text('Shree Umiya BCA College', style: TextStyles.size16Black()),
-              Text(
-                'Sola Bhagvat, Sola, Ahmedabad',
-                style: TextStyles.size16Black(),
-              ),
-            ],
-          ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Bachelor of Computer Applications',
+                  style: TextStyles.size16BlackBold(),
+                ),
+                Text('2019 - 2022', style: TextStyles.size16Black()),
+              ],
+            ),
+            Text('Shree Umiya BCA College', style: TextStyles.size16Black()),
+            Text(
+              'Sola Bhagvat, Sola, Ahmedabad',
+              style: TextStyles.size16Black(),
+            ),
+          ],
         ),
       ],
     );
@@ -53,9 +46,9 @@ class EducationWidget extends StatelessWidget {
       children: [
         pw.Text(
           ConstTexts.educationTitle,
-          style: PwTextStyles.size16TealW600(),
+          style: PwTextStyles.size14TealW600(),
         ),
-        Gap(height: 8.0).toPW(),
+        Gap(height: 4.0).toPW(),
         pw.Column(
           crossAxisAlignment: pw.CrossAxisAlignment.stretch,
           children: [
@@ -64,24 +57,21 @@ class EducationWidget extends StatelessWidget {
               children: [
                 pw.Text(
                   'Bachelor of Computer Applications',
-                  style: PwTextStyles.size16BlackBold(),
+                  style: PwTextStyles.size14BlackBold(),
                 ),
-                pw.Expanded(
-                  child: LineDivider(height: 2.0).toPW().horizontalPadding(8.0),
-                ),
-                pw.Text('2019 - 2022', style: PwTextStyles.size16Black()),
+                pw.Text('2019 - 2022', style: PwTextStyles.size12Black()),
               ],
             ),
             pw.Text(
               'Shree Umiya BCA College',
-              style: PwTextStyles.size16Black(),
+              style: PwTextStyles.size12Black(),
             ),
             pw.Text(
               'Sola Bhagvat, Sola, Ahmedabad',
-              style: PwTextStyles.size16Black(),
+              style: PwTextStyles.size12Black(),
             ),
           ],
-        ),
+        ).verticalPadding(4.0),
       ],
     );
   }

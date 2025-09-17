@@ -71,9 +71,9 @@ class WorkExperienceWidget extends StatelessWidget {
       children: [
         pw.Text(
           ConstTexts.workExperienceTitle,
-          style: PwTextStyles.size16TealW600(),
+          style: PwTextStyles.size14TealW600(),
         ),
-        Gap(height: 8.0).toPW(),
+        Gap(height: 4.0).toPW(),
         pw.Column(
           children: [
             ..._jobs.map((job) => WorkExperienceCard(jobDetails: job).toPW()),

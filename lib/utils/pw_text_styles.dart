@@ -18,7 +18,7 @@ class PwTextStyles {
     );
   }
 
-  static pw.TextStyle size30TealW600() {
+  static pw.TextStyle size18TealW600() {
     return pw.TextStyle(
       font: _latoBold,
       fontSize: 18,
@@ -26,15 +26,15 @@ class PwTextStyles {
     );
   }
 
-  static pw.TextStyle size16TealW600() {
+  static pw.TextStyle size14TealW600() {
     return pw.TextStyle(
       font: _latoBold,
-      fontSize: 11,
+      fontSize: 14,
       color: PdfColors.teal700,
     );
   }
 
-  static pw.TextStyle size12Black() {
+  static pw.TextStyle size10Black() {
     return pw.TextStyle(
       font: _latoRegular,
       fontSize: 10,
@@ -42,18 +42,26 @@ class PwTextStyles {
     );
   }
 
-  static pw.TextStyle size14Black() {
+  static pw.TextStyle size12Black() {
     return pw.TextStyle(
       font: _latoRegular,
-      // fontSize: 14,
+      fontSize: 12,
       color: PdfColors.black,
     );
   }
 
-  static pw.TextStyle size14White() {
+  static pw.TextStyle size14Black() {
     return pw.TextStyle(
       font: _latoRegular,
-      // fontSize: 14,
+      fontSize: 14,
+      color: PdfColors.black,
+    );
+  }
+
+  static pw.TextStyle size12White() {
+    return pw.TextStyle(
+      font: _latoRegular,
+      fontSize: 12,
       color: PdfColors.white,
     );
   }
@@ -61,13 +69,13 @@ class PwTextStyles {
   static pw.TextStyle size16Black() {
     return pw.TextStyle(
       font: _latoRegular,
-      fontSize: 11,
+      fontSize: 16,
       color: PdfColors.black,
     );
   }
 
-  static pw.TextStyle size16BlackBold() {
-    return pw.TextStyle(font: _latoBold, fontSize: 16, color: PdfColors.black);
+  static pw.TextStyle size14BlackBold() {
+    return pw.TextStyle(font: _latoBold, fontSize: 14, color: PdfColors.black);
   }
 
   static pw.TextStyle size18BlackBold() {

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/common/gap.dart';
 import 'package:portfolio/common/rounded_card.dart';
 import 'package:portfolio/utils/const_texts.dart';
+import 'package:portfolio/utils/extensions.dart';
 import 'package:portfolio/utils/pw_text_styles.dart';
 import 'package:portfolio/utils/text_styles.dart';
 import 'package:pdf/widgets.dart' as pw;
@@ -45,15 +46,15 @@ class SkillsWidget extends StatelessWidget {
     return pw.Column(
       crossAxisAlignment: pw.CrossAxisAlignment.stretch,
       children: [
-        pw.Text(ConstTexts.skillsTitle, style: PwTextStyles.size16TealW600()),
-        Gap(height: 8.0).toPW(),
+        pw.Text(ConstTexts.skillsTitle, style: PwTextStyles.size14TealW600()),
+        Gap(height: 4.0).toPW(),
         pw.Wrap(
-          spacing: 8.0,
-          runSpacing: 8.0,
+          spacing: 4.0,
+          runSpacing: 4.0,
           children: [
             ..._skills.map((skill) => RoundedCard(text: skill).toPW()),
           ],
-        ),
+        ).verticalPadding(4.0),
       ],
     );
   }

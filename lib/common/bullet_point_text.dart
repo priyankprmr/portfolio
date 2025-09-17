@@ -29,7 +29,7 @@ class BulletPointText extends StatelessWidget {
         HorizontalDotSpacer(
           size: 6.0,
         ).toPW().symmetricPadding(vertical: 6.0, horizontal: 8.0),
-        pw.Flexible(child: pw.Text(_text, style: PwTextStyles.size14Black())),
+        pw.Flexible(child: pw.Text(_text, style: PwTextStyles.size12Black())),
       ],
     );
   }

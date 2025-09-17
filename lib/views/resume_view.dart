@@ -1,7 +1,9 @@
+// import 'dart:convert' show base64;
 
 import 'package:flutter/material.dart';
 import 'package:pdf/pdf.dart' show PdfPageFormat;
 import 'package:portfolio/common/gap.dart';
+import 'package:portfolio/common/line_divider.dart';
 import 'package:portfolio/utils/extensions.dart';
 import 'package:portfolio/views/widgets/education_widget.dart';
 import 'package:portfolio/views/widgets/personal_info_widget.dart';
@@ -24,35 +26,36 @@ class ResumeView extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         PersonalInfoWidget(),
-        Gap(height: 12.0),
+        LineDivider(padding: 16.0, height: 1.0),
         ProfessionalSummaryWidget(),
-        Gap(height: 12.0),
+        LineDivider(padding: 16.0, height: 1.0),
         WorkExperienceWidget(),
-        Gap(height: 12.0),
+        LineDivider(padding: 16.0, height: 1.0),
         SkillsWidget(),
-        Gap(height: 12.0),
+        LineDivider(padding: 16.0, height: 1.0),
         EducationWidget(),
         Gap(height: 12.0),
       ],
     ).allPadding(16.0);
 
     pdf.addPage(
+      index: 0,
       pw.Page(
+        margin: pw.EdgeInsets.all(28.0),
         pageFormat: PdfPageFormat.a4,
         build: (context) {
           return pw.Column(
             crossAxisAlignment: pw.CrossAxisAlignment.stretch,
             children: [
               PersonalInfoWidget().toPW(),
-              Gap(height: 4.0).toPW(),
+              LineDivider(padding: 16.0, height: 1.0).toPW(),
               ProfessionalSummaryWidget().toPW(),
-              Gap(height: 4.0).toPW(),
+              LineDivider(padding: 16.0, height: 1.0).toPW(),
               WorkExperienceWidget().toPW(),
-              Gap(height: 4.0).toPW(),
+              LineDivider(padding: 16.0, height: 1.0).toPW(),
               SkillsWidget().toPW(),
-              Gap(height: 4.0).toPW(),
+              LineDivider(padding: 16.0, height: 1.0).toPW(),
               EducationWidget().toPW(),
-              Gap(height: 4.0).toPW(),
             ],
           );
         },
@@ -64,11 +67,8 @@ class ResumeView extends StatelessWidget {
         backgroundColor: Colors.teal.shade700,
 
         onPressed: () async {
-          // context.go('/web_view');
           var savedFile = await pdf.save();
           // List<int> fileInts = List.from(savedFile);
-
-          // ignore: invalid_runtime_check_with_js_interop_types
           final blob = web.Blob(
             [savedFile.toJS].toJS,
             web.BlobPropertyBag(type: 'application/pdf'),
@@ -87,14 +87,19 @@ class ResumeView extends StatelessWidget {
         child: Icon(Icons.download_rounded, color: Colors.white),
       ),
 
-      body: Container(
-        padding: EdgeInsetsGeometry.all(16.0),
-        margin: EdgeInsetsGeometry.all(16.0),
-        decoration: BoxDecoration(
-          border: Border.all(color: Colors.black),
-          borderRadius: BorderRadius.circular(8.0),
+      body: Center(
+        child: Container(
+          padding: EdgeInsetsGeometry.all(16.0),
+          margin: EdgeInsetsGeometry.all(16.0),
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.black),
+            borderRadius: BorderRadius.circular(8.0),
+          ),
+          constraints: BoxConstraints.tightFor(
+            width: MediaQuery.sizeOf(context).width / 2,
+          ),
+          child: SingleChildScrollView(child: widgetsTree),
         ),
-        child: SingleChildScrollView(child: widgetsTree),
       ),
     );
   }

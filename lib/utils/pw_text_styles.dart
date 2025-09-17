@@ -21,7 +21,7 @@ class PwTextStyles {
   static pw.TextStyle size30TealW600() {
     return pw.TextStyle(
       font: _latoBold,
-      fontSize: 24,
+      fontSize: 18,
       color: PdfColors.teal700,
     );
   }
@@ -37,7 +37,7 @@ class PwTextStyles {
   static pw.TextStyle size12Black() {
     return pw.TextStyle(
       font: _latoRegular,
-      // fontSize: 12,
+      fontSize: 10,
       color: PdfColors.black,
     );
   }

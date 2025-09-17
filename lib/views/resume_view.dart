@@ -1,4 +1,3 @@
-import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:pdf/pdf.dart' show PdfPageFormat;
@@ -9,10 +8,10 @@ import 'package:portfolio/views/widgets/personal_info_widget.dart';
 import 'package:portfolio/views/widgets/professional_summary_widget.dart';
 import 'package:portfolio/views/widgets/skills_widget.dart';
 import 'package:portfolio/views/widgets/work_experience_widget.dart';
-// ignore: depend_on_referenced_packages
 import 'package:web/web.dart' as web;
 // import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
+import 'dart:js_interop' as js;
 
 class ResumeView extends StatelessWidget {
   const ResumeView({super.key});
@@ -65,16 +64,25 @@ class ResumeView extends StatelessWidget {
         backgroundColor: Colors.teal.shade700,
 
         onPressed: () async {
+          // context.go('/web_view');
           var savedFile = await pdf.save();
-          List<int> fileInts = List.from(savedFile);
-          web.HTMLAnchorElement()
-            ..href =
-                "data:application/octet-stream;charset=utf-16le;base64,${base64.encode(fileInts)}"
-            ..setAttribute(
-              "download",
-              "${DateTime.now().millisecondsSinceEpoch}.pdf",
-            )
-            ..click();
+          // List<int> fileInts = List.from(savedFile);
+
+          // ignore: invalid_runtime_check_with_js_interop_types
+          final blob = web.Blob(
+            [savedFile.toJS].toJS,
+            web.BlobPropertyBag(type: 'application/pdf'),
+          );
+          final url = web.URL.createObjectURL(blob);
+          web.window.open(url, '/resume');
+          // web.HTMLAnchorElement()
+          //   ..href =
+          //       "data:application/octet-stream;charset=utf-16le;base64,${base64.encode(fileInts)}"
+          //   ..setAttribute(
+          //     "download",
+          //     "${DateTime.now().millisecondsSinceEpoch}.pdf",
+          //   )
+          //   ..click();
         },
         child: Icon(Icons.download_rounded, color: Colors.white),
       ),

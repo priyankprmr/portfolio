@@ -18,7 +18,7 @@ class PersonalInfoWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Text(ConstTexts.name, style: TextStyles.size30TealW600()),
-        LineDivider(padding: 8.0, height: 3.0),
+        LineDivider(padding: 8.0, height: 1.0),
         LayoutBuilder(
           builder: (context, constraints) {
             if (constraints.maxWidth > 615) {
@@ -133,21 +133,21 @@ class PersonalInfoWidget extends StatelessWidget {
       crossAxisAlignment: pw.CrossAxisAlignment.stretch,
       children: [
         pw.Text(ConstTexts.name, style: PwTextStyles.size30TealW600()),
-        LineDivider(padding: 8.0, height: 3.0).toPW(),
+        LineDivider(padding: 8.0, height: 1.0).toPW(),
         pw.Row(
           children: [
             // Text(constraints.maxWidth.toString()),
             pw.Text(ConstTexts.email, style: PwTextStyles.size12Black()),
-            HorizontalDotSpacer(padding: 14.0).toPW(),
+            HorizontalDotSpacer(padding: 8.0).toPW(),
             pw.Text(ConstTexts.phoneNumber, style: PwTextStyles.size12Black()),
-            HorizontalDotSpacer(padding: 14.0).toPW(),
+            HorizontalDotSpacer(padding: 8.0).toPW(),
             pw.Text(
               ConstTexts.linkedinProfile,
               style: PwTextStyles.size12Black().copyWith(
                 decoration: pw.TextDecoration.underline,
               ),
             ),
-            HorizontalDotSpacer(padding: 14.0).toPW(),
+            HorizontalDotSpacer(padding: 8.0).toPW(),
             pw.Text(
               ConstTexts.githubProfile,
               style: PwTextStyles.size12Black().copyWith(

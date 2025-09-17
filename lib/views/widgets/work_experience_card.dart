@@ -26,9 +26,17 @@ class WorkExperienceCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(_jobDetails.designation, style: TextStyles.size16BlackBold()),
-            if (_showLine)
-              Expanded(child: LineDivider(height: 2.0).horizontalPadding(8.0)),
-            Text(_jobDetails.duration, style: TextStyles.size16Black()),
+
+            // if (_showLine)
+            Row(
+              children: [
+                SizedBox(
+                  width: 100,
+                  child: LineDivider(height: 1.0).horizontalPadding(8.0),
+                ),
+                Text(_jobDetails.duration, style: TextStyles.size16Black()),
+              ],
+            ),
           ],
         ),
         Text(_jobDetails.company, style: TextStyles.size16Black()),
@@ -57,10 +65,10 @@ class WorkExperienceCard extends StatelessWidget {
               _jobDetails.designation,
               style: PwTextStyles.size16BlackBold(),
             ),
-            if (_showLine)
-              pw.Expanded(
-                child: LineDivider(height: 2.0).toPW().horizontalPadding(8.0),
-              ),
+            // if (_showLine)
+            //   pw.Expanded(
+            //     child: LineDivider(height: 2.0).toPW().horizontalPadding(8.0),
+            //   ),
             pw.Text(_jobDetails.duration, style: PwTextStyles.size16Black()),
           ],
         ),

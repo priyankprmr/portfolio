@@ -142,16 +142,12 @@ class PersonalInfoWidget extends StatelessWidget {
             HorizontalDotSpacer(padding: 8.0).toPW(),
             pw.Text(
               ConstTexts.linkedinProfile,
-              style: PwTextStyles.size10Black().copyWith(
-                decoration: pw.TextDecoration.underline,
-              ),
+              style: PwTextStyles.size10Black(),
             ),
             HorizontalDotSpacer(padding: 8.0).toPW(),
             pw.Text(
               ConstTexts.githubProfile,
-              style: PwTextStyles.size10Black().copyWith(
-                decoration: pw.TextDecoration.underline,
-              ),
+              style: PwTextStyles.size10Black(),
             ),
           ],
         ),

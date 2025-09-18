@@ -1,11 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio/common/gap.dart';
-import 'package:portfolio/common/horizontal_dot_spacer.dart';
-import 'package:portfolio/utils/const_texts.dart';
-import 'package:portfolio/utils/pw_text_styles.dart';
-import 'package:portfolio/utils/text_styles.dart';
-// ignore: depend_on_referenced_packages
+import 'package:portfolio/core/widgets/gap.dart';
+import 'package:portfolio/core/widgets/horizontal_dot_spacer.dart';
+import 'package:portfolio/core/utils/const_texts.dart';
+import 'package:portfolio/core/theme/pw_text_styles.dart';
+import 'package:portfolio/core/theme/text_styles.dart';
 import 'package:web/web.dart' as web;
 import 'package:pdf/widgets.dart' as pw;
 

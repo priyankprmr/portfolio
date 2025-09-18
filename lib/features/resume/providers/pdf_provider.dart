@@ -3,7 +3,7 @@ import 'dart:js_interop';
 
 import 'package:pdf/pdf.dart' show PdfPageFormat;
 import 'package:pdf/widgets.dart' as pw;
-import 'package:portfolio/utils/const_texts.dart' show ConstTexts;
+import 'package:portfolio/core/utils/const_texts.dart' show ConstTexts;
 import 'package:web/web.dart' as web;
 
 class PdfProvider {

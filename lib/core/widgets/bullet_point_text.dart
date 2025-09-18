@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/common/horizontal_dot_spacer.dart';
-import 'package:portfolio/utils/extensions.dart';
-import 'package:portfolio/utils/pw_text_styles.dart';
-import 'package:portfolio/utils/text_styles.dart';
+import 'package:portfolio/core/widgets/horizontal_dot_spacer.dart';
+import 'package:portfolio/core/extensions/extensions.dart';
+import 'package:portfolio/core/theme/pw_text_styles.dart';
+import 'package:portfolio/core/theme/text_styles.dart';
 import 'package:pdf/widgets.dart' as pw;
 
 class BulletPointText extends StatelessWidget {

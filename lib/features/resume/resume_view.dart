@@ -1,20 +1,18 @@
-// import 'dart:convert' show base64;
-
 import 'package:flutter/material.dart';
-import 'package:portfolio/common/gap.dart';
-import 'package:portfolio/common/line_divider.dart';
-import 'package:portfolio/providers/pdf_provider.dart';
-import 'package:portfolio/utils/extensions.dart';
-import 'package:portfolio/views/widgets/education_widget.dart';
-import 'package:portfolio/views/widgets/personal_info_widget.dart';
-import 'package:portfolio/views/widgets/professional_summary_widget.dart';
-import 'package:portfolio/views/widgets/skills_widget.dart';
-import 'package:portfolio/views/widgets/work_experience_widget.dart';
+import 'package:portfolio/core/widgets/gap.dart';
+import 'package:portfolio/core/widgets/line_divider.dart';
+import 'package:portfolio/features/resume/providers/pdf_provider.dart';
+import 'package:portfolio/core/extensions/extensions.dart';
+import 'package:portfolio/features/resume/widgets/education_widget.dart';
+import 'package:portfolio/features/resume/widgets/personal_info_widget.dart';
+import 'package:portfolio/features/resume/widgets/professional_summary_widget.dart';
+import 'package:portfolio/features/resume/widgets/skills_widget.dart';
+import 'package:portfolio/features/resume/widgets/work_experience_widget.dart';
 import 'package:provider/provider.dart';
 import 'package:pdf/widgets.dart' as pw;
 
-class ResumeView extends StatelessWidget {
-  const ResumeView({super.key});
+class ResumePage extends StatelessWidget {
+  const ResumePage({super.key});
 
   @override
   Widget build(BuildContext context) {

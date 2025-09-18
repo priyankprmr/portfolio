@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/common/gap.dart';
-import 'package:portfolio/common/rounded_card.dart';
-import 'package:portfolio/utils/const_texts.dart';
-import 'package:portfolio/utils/extensions.dart';
-import 'package:portfolio/utils/pw_text_styles.dart';
-import 'package:portfolio/utils/text_styles.dart';
+import 'package:portfolio/core/widgets/gap.dart';
+import 'package:portfolio/core/widgets/rounded_card.dart';
+import 'package:portfolio/core/utils/const_texts.dart';
+import 'package:portfolio/core/extensions/extensions.dart';
+import 'package:portfolio/core/theme/pw_text_styles.dart';
+import 'package:portfolio/core/theme/text_styles.dart';
 import 'package:pdf/widgets.dart' as pw;
 
 class SkillsWidget extends StatelessWidget {

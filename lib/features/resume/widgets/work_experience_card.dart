@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/common/bullet_point_text.dart';
-import 'package:portfolio/common/gap.dart';
-import 'package:portfolio/utils/extensions.dart';
-import 'package:portfolio/utils/pw_text_styles.dart';
-import 'package:portfolio/utils/text_styles.dart';
-import 'package:portfolio/views/widgets/work_experience_widget.dart';
+import 'package:portfolio/core/widgets/bullet_point_text.dart';
+import 'package:portfolio/core/widgets/gap.dart';
+import 'package:portfolio/core/extensions/extensions.dart';
+import 'package:portfolio/core/theme/pw_text_styles.dart';
+import 'package:portfolio/core/theme/text_styles.dart';
+import 'package:portfolio/features/resume/widgets/work_experience_widget.dart';
 import 'package:pdf/widgets.dart' as pw;
 
 class WorkExperienceCard extends StatelessWidget {

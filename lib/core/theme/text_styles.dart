@@ -37,7 +37,11 @@ class TextStyles {
   }
 
   static TextStyle size16BlackBold() {
-    return GoogleFonts.lato(fontSize: 16.0, fontWeight: FontWeight.bold);
+    return GoogleFonts.lato(
+      fontSize: 16.0,
+      fontWeight: FontWeight.bold,
+      color: Colors.black,
+    );
   }
 
   static TextStyle size18BlackBold() {

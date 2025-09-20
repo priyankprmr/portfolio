@@ -24,10 +24,7 @@ class CursorOverlay extends StatelessWidget {
                       height: cp.cursorSize.height,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        border: Border.all(
-                          color: Colors.teal.shade700,
-                          width: 2,
-                        ),
+                        border: Border.all(color: Colors.black, width: 2),
                       ),
                     ),
                   ),
@@ -43,7 +40,7 @@ class CursorOverlay extends StatelessWidget {
                   height: cp.cursorSize.height,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    border: Border.all(color: Colors.teal.shade700, width: 2),
+                    border: Border.all(color: Colors.black, width: 2),
                   ),
                 ),
               ),

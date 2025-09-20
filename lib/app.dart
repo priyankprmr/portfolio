@@ -16,7 +16,10 @@ class MainApp extends StatelessWidget {
         GoRoute(
           path: '/',
           builder: (BuildContext context, GoRouterState state) {
-            return const HomePage();
+            // TODO: remove after web upload
+            return const ResumePage();
+            // TODO: uncomment after web upload
+            // return const HomePage();
           },
         ),
 
@@ -26,12 +29,13 @@ class MainApp extends StatelessWidget {
             return const ProjectsPage();
           },
         ),
-        GoRoute(
-          path: '/resume',
-          builder: (BuildContext context, GoRouterState state) {
-            return const ResumePage();
-          },
-        ),
+        // TODO: uncomment after web upload
+        // GoRoute(
+        //   path: '/resume',
+        //   builder: (BuildContext context, GoRouterState state) {
+        //     return const ResumePage();
+        //   },
+        // ),
       ],
     );
 
